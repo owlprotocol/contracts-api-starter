@@ -1,5 +1,6 @@
 import { createClient } from "@owlprotocol/contracts-api-client-trpc";
 import {readFileSync} from "fs";
+import path from "path";
 import dotenv from "dotenv";
 
 dotenv.config();
@@ -17,6 +18,7 @@ const networkId = "31337";
 const account = "0x0000000000000000000000000000000000000001";
 
 async function deployERC721OwlCollection(){
+
     const contract = await client.collection.deploy.mutate({
         networkId,
         name: "My Collection",
@@ -45,8 +47,8 @@ async function deployERC721OwlCollection(){
         contractParams: {tokenId},
     });
 
-    const filePath = "./image.png";
-    const imageFile = readFileSync(filePath);
+    const filePath = "src/images/owl_beach-sticker.png";
+    const imageFile = readFileSync(path.join(process.cwd(), filePath));
     const imageContent = imageFile.toString("base64");
     const imageSuffix = "png";
 
