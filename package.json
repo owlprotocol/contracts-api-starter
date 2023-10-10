@@ -49,10 +49,11 @@
     "madge": "madge src/index.ts -c",
     "lint": "eslint 'src/**/*.ts'",
     "lint:fix": "eslint --fix 'src/**/*.ts'",
+    "recipes:deploy-safe": "tsx src/deploy-safe.ts",
     "recipes:deploy-erc721-owl-collection": "tsx src/deploy-erc721-owl-collection.ts"
   },
   "dependencies": {
-    "@owlprotocol/contracts-api-client-trpc": "2.0.2",
+    "@owlprotocol/contracts-api-client-trpc": "2.0.4",
     "ethers": "5.7.2"
   },
   "devDependencies": {

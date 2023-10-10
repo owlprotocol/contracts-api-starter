@@ -1,10 +1,15 @@
 import { createClient } from "@owlprotocol/contracts-api-client-trpc";
 import {readFileSync} from "fs";
-import "dotenv/config";
+import dotenv from "dotenv";
+
+dotenv.config();
 
 // API_URL is optional
 const { API_KEY, API_URL } = process.env;
 if (!API_KEY) throw new Error(`API_KEY ${API_KEY}! Get API_KEY by signing up and adding it to .env file`);
+
+console.log(API_URL);
+console.log(API_KEY);
 
 // 0. Create TRPC Client (API_KEY required)
 const client = createClient(API_KEY, API_URL);

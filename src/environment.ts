@@ -3,6 +3,8 @@
  * replacement used by client bundlers (Vite, Webpack...) and `process.env` for NodeJS libraries.
  * @module Environment
  */
+import dotenv from "dotenv";
+
 declare global {
     // eslint-disable-next-line @typescript-eslint/no-namespace
     namespace NodeJS {
@@ -25,7 +27,7 @@ declare global {
 const isClient = () => typeof window !== "undefined";
 
 if (!isClient()) {
-    require('dotenv').config()
+    dotenv.config();
 }
 
 // @ts-ignore
