@@ -61,7 +61,7 @@
     "@owlprotocol/prettier-config": "2.0.2",
     "@owlprotocol/contracts": "2.0.2",
     "@owlprotocol/contracts-api": "2.0.2",
-    "@owlprotocol/contracts-proxy": "2.0.2",
+    "@owlprotocol/contracts-proxy": "2.0.4",
     "@owlprotocol/tsconfig": "2.0.2",
     "@types/node": "^16.11.26",
     "@types/dotenv": "^8.2.0",
