@@ -1,5 +1,5 @@
 import { createClient } from "@owlprotocol/contracts-api-client-trpc";
-import {readFileSync} from "fs";
+import { readFileSync } from "fs";
 import path from "path";
 import dotenv from "dotenv";
 
@@ -40,7 +40,7 @@ async function deployERC721OwlCollection(){
         ],
     });
 
-    const {tokenId} = mint.tokens[0];
+    const { tokenId } = mint.tokens[0];
     const owner = await client.interfaces.IERC721.ownerOf.mutate({
         address,
         networkId,
