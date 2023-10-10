@@ -30,7 +30,7 @@ pnpm install
 
 ## Get an API Key
 
--   Sign up on [dashboard.owlprotocol.xyz/](https://dashboard.owlprotocol.xyz/)
+-   Sign up on [dashboard.owlprotocol.xyz](https://dashboard.owlprotocol.xyz/)
 -   Go to [docs-api.owlprotocol.xyz/docs](https://docs-api.owlprotocol.xyz/docs), and sign up to get your API key
 
 Create a `.env` file similar to `.env.example`:
