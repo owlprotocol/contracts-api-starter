@@ -49,10 +49,7 @@
     "madge": "madge src/index.ts -c",
     "lint": "eslint 'src/**/*.ts'",
     "lint:fix": "eslint --fix 'src/**/*.ts'",
-    "recipes:create-demo-user": "tsx src/create-demo-user.ts",
-    "recipes:deploy-safe": "tsx src/deploy-safe.ts",
-    "recipes:deploy-erc20": "tsx src/deploy-erc20.ts",
-    "recipes:deploy-erc721": "tsx src/deploy-erc721.ts"
+    "recipes:deploy-erc721-owl-collection": "tsx src/deploy-erc721-owl-collection.ts"
   },
   "dependencies": {
     "@owlprotocol/contracts-api-client-trpc": "2.0.2",
@@ -65,6 +62,7 @@
     "@owlprotocol/contracts": "2.0.2",
     "@owlprotocol/contracts-api": "2.0.2",
     "@owlprotocol/contracts-proxy": "2.0.2",
+    "@owlprotocol/tsconfig": "2.0.2",
     "@types/node": "^16.11.26",
     "@types/dotenv": "^8.2.0",
     "cross-env": "^7.0.3",

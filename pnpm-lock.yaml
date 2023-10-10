@@ -31,6 +31,9 @@ devDependencies:
   '@owlprotocol/prettier-config':
     specifier: 2.0.2
     version: 2.0.2
+  '@owlprotocol/tsconfig':
+    specifier: 2.0.2
+    version: 2.0.2
   '@types/dotenv':
     specifier: ^8.2.0
     version: 8.2.0
@@ -1654,6 +1657,10 @@ packages:
   /@owlprotocol/prettier-config@2.0.2:
     resolution: {integrity: sha512-Kr+va44sQXDVScLCQaFk5HRELZKhX7n53uzeJ86iSRnsk8b+VdPz4IvL2C+k2p73b858EaEDENpYiZbKI3R7rg==}
     engines: {node: ^18.0.0}
+    dev: true
+
+  /@owlprotocol/tsconfig@2.0.2:
+    resolution: {integrity: sha512-JDYIoozBsvTvBmKOlB6GeR+vHHaoP3BJF42bbzfU2gQRtkqZNGLNjKX0NwF0tMCnZLt8QN8kGNgh5q0Sj5oTiA==}
     dev: true
 
   /@owlprotocol/utils@2.0.2:
