@@ -14,7 +14,7 @@ console.log(API_KEY);
 
 // 0. Create TRPC Client (API_KEY required)
 const client = createClient(API_KEY, API_URL);
-const networkId = "31337";
+const networkId = "59140";
 const account = "0x0000000000000000000000000000000000000001";
 
 async function deployERC721OwlCollection(){
