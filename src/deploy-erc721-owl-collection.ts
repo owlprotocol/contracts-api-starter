@@ -6,7 +6,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 // API_URL is optional
-const { API_KEY, API_URL } = process.env;
+const { API_KEY, API_URL, NETWORK_ID } = process.env;
 if (!API_KEY) throw new Error(`API_KEY ${API_KEY}! Get API_KEY by signing up and adding it to .env file`);
 
 console.log(API_URL);
@@ -14,7 +14,7 @@ console.log(API_KEY);
 
 // 0. Create TRPC Client (API_KEY required)
 const client = createClient(API_KEY, API_URL);
-const networkId = "59140";
+const networkId = NETWORK_ID ?? "80001";
 const account = "0x0000000000000000000000000000000000000001";
 
 async function deployERC721OwlCollection(){

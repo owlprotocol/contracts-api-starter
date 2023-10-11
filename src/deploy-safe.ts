@@ -16,7 +16,7 @@ export async function deploySafeRecipe() {
     const client = createClient(API_KEY, API_URL);
 
     //1. Create Safe Multisig for user
-    const networkId = "59140";
+    const networkId = NETWORK_ID ?? "80001";
     console.log(`Connecting to Chain ID: ${networkId}`);
     const safe = await client.safe.deploy.mutate({ networkId });
 
