@@ -1,7 +1,7 @@
 FROM node:18-alpine AS base
 RUN apk add --no-cache libc6-compat git
 RUN apk update
-RUN apk add alpine-sdk python3
+RUN apk add g++ make py3-pip
 ENV PNPM_HOME="/pnpm"
 ENV PATH="$PNPM_HOME:$PATH"
 RUN yarn global add pnpm
