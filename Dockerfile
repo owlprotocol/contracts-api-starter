@@ -20,11 +20,7 @@ COPY .lintstagedrc.json .
 COPY .eslintignore .
 COPY .eslintrc.cjs .
 
-# RUN echo $(ls -la /app)
-
 RUN pnpm install
-
-# RUN rm -rf ./node_modules/.pnpm/@owlprotocol+contracts-proxy@2.0.2_@ethersproject+abi@5.7.0_@ethersproject+contracts@5.7.0_@e_ce7yshsgmvd3kzaqe4khx7swwq/
 
 RUN pnpm run build
 
