@@ -31,7 +31,7 @@ pnpm install
 ## Get an API Key
 
 -   Sign up on [dashboard.owlprotocol.xyz](https://dashboard.owlprotocol.xyz/)
--   Go to [docs-api.owlprotocol.xyz/docs](https://docs-api.owlprotocol.xyz/docs), and sign up to get your API key
+-   Go to the Dashboard's Settings page to get your API key
 
 Create a `.env` file similar to `.env.example`:
 
@@ -46,7 +46,7 @@ These recipes are meant to showcase example use cases of the Owl Protocol API. C
 
 ### Safe Smart Wallet
 
-You **MUST** run this recipe **FIRST** before any other recipe. A [Gnosis Safe](https://safe.global/) is required for **each chain** to use [Account Abstraction](https://ethereum.org/en/roadmap/account-abstraction/) features (gas sponsorship, batch transactions).
+You **MUST** run this recipe **FIRST** before any other recipe. A [Gnosis Safe](https://safe.global/) is required for **each wallet** to use [Account Abstraction](https://ethereum.org/en/roadmap/account-abstraction/) features (gas sponsorship, batch transactions).
 
 This Recipe has the following steps:
 
@@ -56,20 +56,7 @@ This Recipe has the following steps:
 pnpm run recipes:deploy-safe
 ```
 
-### ERC20
-
-Run this recipe to deploy an ERC20 token called `My Token` with `MY` ticker symbol.
-
-This Recipe has the following steps:
-
-1. Deploy an [ERC20](https://ethereum.org/en/developers/docs/standards/tokens/erc-20/) token
-2. Mint 100 tokens to `address(1)`.
-
-```bash
-pnpm run recipes:deploy-erc20
-```
-
-### ERC721
+### ERC721 Owl Recipe
 
 Run this recipe to deploy an ERC721 collection called `My Collection` with a `MY` ticker symbol.
 
@@ -77,3 +64,7 @@ This Recipe has the following steps:
 
 1. Deploy an [ERC721](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/) collection
 2. Mint one NFT to `address(1)`
+
+```bash
+pnpm run recipes:deploy-erc721-owl-collection
+```

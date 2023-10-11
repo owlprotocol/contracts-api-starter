@@ -53,15 +53,15 @@
     "recipes:deploy-erc721-owl-collection": "tsx src/deploy-erc721-owl-collection.ts"
   },
   "dependencies": {
-    "@owlprotocol/contracts-api-client-trpc": "2.0.4",
+    "@owlprotocol/contracts-api-client-trpc": "2.0.5",
     "ethers": "5.7.2"
   },
   "devDependencies": {
     "@owlprotocol/esbuild-config": "2.0.2",
     "@owlprotocol/eslint-config": "2.0.2",
     "@owlprotocol/prettier-config": "2.0.2",
-    "@owlprotocol/contracts": "2.0.2",
-    "@owlprotocol/contracts-api": "2.0.2",
+    "@owlprotocol/contracts": "2.0.3",
+    "@owlprotocol/contracts-api": "2.0.4",
     "@owlprotocol/contracts-proxy": "2.0.4",
     "@owlprotocol/tsconfig": "2.0.2",
     "@types/node": "^16.11.26",

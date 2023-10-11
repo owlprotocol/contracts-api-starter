@@ -42,6 +42,7 @@ logs
 .env.development
 .env.test
 .env.production
+.env.backup
 .env
 
 # turbo
