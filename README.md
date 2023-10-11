@@ -35,9 +35,12 @@ pnpm install
 
 Create a `.env` file similar to `.env.example`:
 
+In this example we are using Linea `chainId`: 59140, another common one for testing is Polygon testnet (Mumbai): 80001
+
 ```bash
 API_KEY="<YOUR_API_KEY>"
 API_URL="http://contracts-api.owlprotocol.xyz/api/trpc"
+NETWORK_ID=59140
 ```
 
 ## Recipes
