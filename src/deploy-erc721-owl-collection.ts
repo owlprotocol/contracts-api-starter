@@ -25,8 +25,12 @@ async function deployERC721OwlCollection(){
         symbol: "MY",
     });
 
+    console.log(contract);
 
     const address = contract.contractAddress;
+
+    await sleep(10000);
+
     const mint = await client.collection.erc721.mint.mutate({
         networkId,
         address,
@@ -40,6 +44,8 @@ async function deployERC721OwlCollection(){
         ],
     });
 
+    console.log(mint);
+
     const { tokenId } = mint.tokens[0];
     const owner = await client.interfaces.IERC721.ownerOf.mutate({
         address,
@@ -47,24 +53,16 @@ async function deployERC721OwlCollection(){
         contractParams: {tokenId},
     });
 
-    const filePath = "src/images/owl_beach-sticker.png";
-    const imageFile = readFileSync(path.join(process.cwd(), filePath));
-    const imageContent = imageFile.toString("base64");
-    const imageSuffix = "png";
-
-    const imageUrl = await client.collection.createCollectionTokenIdImage.mutate({
-        address,
-        networkId,
-        tokenId,
-        imageContent,
-        imageSuffix,
-    });
-
-    console.log(owner, imageUrl);
+    console.log(tokenId);
+    console.log('owner', owner);
 }
 
 async function main() {
     await deployERC721OwlCollection();
+}
+
+function sleep(ms: number) {
+    return new Promise(resolve => setTimeout(resolve, ms));
 }
 
 main();
