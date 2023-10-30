@@ -61,7 +61,7 @@
     "@owlprotocol/eslint-config": "2.0.2",
     "@owlprotocol/prettier-config": "2.0.2",
     "@owlprotocol/contracts": "2.0.3",
-    "@owlprotocol/contracts-api": "2.0.4",
+    "@owlprotocol/contracts-api": "2.0.6",
     "@owlprotocol/contracts-proxy": "2.0.4",
     "@owlprotocol/tsconfig": "2.0.2",
     "@types/node": "^16.11.26",
