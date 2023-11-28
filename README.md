@@ -1,6 +1,71 @@
-# Owl Protocol Contracts API TRPC Start
+# Owl Protocol Contracts API TRPC Starter
 
-Owl Protocol API Example Recipes using our TRPC client.
+Owl Protocol API Example using our TRPC client.
+
+> This guide assumes you are integrating Owl API with an **existing app with your own user base**.
+
+### Our Web3 API is a powerful tool to easily integrate blockchain into your app or platform.
+
+#### Typescript TRPC Client SDK:
+
+```ts
+import { createClient } from "@owlprotocol/contracts-api-client-trpc";
+
+(async () => {
+
+  const projectId = await client.project.projectCreate.mutate({
+      projectName: "MyWeb3App",
+      description: ""
+  });
+
+  const {safeAddress, owlUserId: userId} = await client.user.getOrCreateByEmail.mutate({
+      projectId,
+      email
+  });
+})();
+```
+#### OR
+
+#### REST API - TRPC with OpenAPI
+
+```
+
+```
+
+## Features
+
+1. Generate unique, universal, multichain **Owl Smart Wallets** for any user using just their email. **These wallets are fully controlled by the email account owner.**
+
+2. Deploy on-chain collections of unique digital cards or items for a variety of use cases, including:
+   - **Art or Real-World Assets** - tie real world items to a unique on-chain item with metadata.
+   - **Gaming or Avatars** - create on-chain ownable items of your in-game items or characters to give your users more control of their assets.
+   - **Loyalty or Reward Cards** - track your user loyalty on Web3 with truly unique loyalty cards that open up a variety of ways to collaborating with other brands and apps.how'
+
+3. Connect your back-end or database with your on-chain digital items, and synchronize data with our API or using our webhooks.
+
+## Quick Links
+
+-
+
+
+
+
+## Getting Started
+
+Generally for integrating an existing app you would do the following:
+
+1. Create an **Owl API Project** associated with your app.
+2. Use our API to generate `Smart Wallets` for each of your users, and "store" the associated `OwlUserId`.
+    > You will need the `OwlUserId` in subsequent calls to send them items or update data.
+3. Deploy a `Digital Item Collection`
+
+
+`TODO: CSV flatfile -> lowdb`
+
+`user.getByEmail`
+
+`user.getOrCreateByEmail`
+
 
 ## Project Setup
 
