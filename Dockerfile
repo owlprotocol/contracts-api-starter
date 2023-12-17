@@ -11,9 +11,11 @@ ENV APP_NAME=contracts-api-starter
 WORKDIR /app
 
 ADD src ./src
+ADD scripts ./scripts
+
+# TODO: force setting API key on each call?
 COPY .env .
 COPY package.json .
-COPY pnpm-lock.yaml .
 COPY tsconfig.json .
 COPY esbuild.config.mjs .
 COPY .lintstagedrc.json .
@@ -23,5 +25,7 @@ COPY .eslintrc.cjs .
 RUN pnpm install
 
 RUN pnpm run build
+
+ENTRYPOINT ["tail", "-f", "/dev/null"]
 
 

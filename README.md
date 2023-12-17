@@ -28,9 +28,7 @@ import { createClient } from "@owlprotocol/contracts-api-client-trpc";
 
 #### REST API - TRPC with OpenAPI
 
-```
-
-```
+*Docs coming soon...*
 
 ## Features
 
@@ -43,12 +41,6 @@ import { createClient } from "@owlprotocol/contracts-api-client-trpc";
 
 3. Connect your back-end or database with your on-chain digital items, and synchronize data with our API or using our webhooks.
 
-## Quick Links
-
--
-
-
-
 
 ## Getting Started
 
@@ -58,13 +50,6 @@ Generally for integrating an existing app you would do the following:
 2. Use our API to generate `Smart Wallets` for each of your users, and "store" the associated `OwlUserId`.
     > You will need the `OwlUserId` in subsequent calls to send them items or update data.
 3. Deploy a `Digital Item Collection`
-
-
-`TODO: CSV flatfile -> lowdb`
-
-`user.getByEmail`
-
-`user.getOrCreateByEmail`
 
 
 ## Project Setup
@@ -100,12 +85,12 @@ pnpm install
 
 Create a `.env` file similar to `.env.example`:
 
-In this example we are using Linea `chainId`: 59140, another common one for testing is Polygon testnet (Mumbai): 80001
+In this example we are using Linea `chainId`: 80001, another common one for testing is Polygon testnet (Mumbai): 80001
 
 ```bash
 API_KEY="<YOUR_API_KEY>"
 API_URL="http://contracts-api.owlprotocol.xyz/api/trpc"
-NETWORK_ID=59140
+NETWORK_ID=80001
 ```
 
 ## Recipes

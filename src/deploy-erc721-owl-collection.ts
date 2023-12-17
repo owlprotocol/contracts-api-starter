@@ -13,7 +13,10 @@ console.log(`API_URL=${API_URL}`);
 console.log(`API_KEY=${API_KEY}`);
 
 // 0. Create TRPC Client (API_KEY required)
-const client = createClient(API_KEY, API_URL);
+const client = createClient(
+    {
+        apiKey: API_KEY
+    }, API_URL);
 const networkId = NETWORK_ID ?? "80001";
 const userAccount = "0xb3BEc97C92A4aEA1371A9184eeD7646CB64146D3";
 
