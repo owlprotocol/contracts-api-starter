@@ -8,6 +8,9 @@ dependencies:
   '@owlprotocol/contracts-api-client-trpc':
     specifier: 2.0.12
     version: 2.0.12
+  dotenv:
+    specifier: ^16.3.1
+    version: 16.3.1
   ethers:
     specifier: 5.7.2
     version: 5.7.2
@@ -43,9 +46,6 @@ devDependencies:
   cross-env:
     specifier: ^7.0.3
     version: 7.0.3
-  dotenv:
-    specifier: ^16.3.1
-    version: 16.3.1
   madge:
     specifier: ^5.0.2
     version: 5.0.2
@@ -1683,6 +1683,7 @@ packages:
   /@firebase/firestore@4.2.0(@firebase/app@0.9.19):
     resolution: {integrity: sha512-iKZqIdOBJpJUcwY5airLX0W04TLrQSJuActOP1HG5WoIY5oyGTQE4Ml7hl5GW7mBqFieT4ojtUuDXj6MLrn1lA==}
     engines: {node: '>=10.10.0'}
+    deprecated: This version is not supported due to a bug affecting the Firestore package. Upgrade to 'firebase@10.5.2' or later.
     peerDependencies:
       '@firebase/app': 0.x
     dependencies:
@@ -5052,7 +5053,6 @@ packages:
   /dotenv@16.3.1:
     resolution: {integrity: sha512-IPzF4w4/Rd94bA9imS68tZBaYyBWSCE47V1RGuMrB94iyTOIEwRmVL2x/4An+6mETpLrKJ5hQkB8W4kFAadeIQ==}
     engines: {node: '>=12'}
-    dev: true
 
   /duplexer2@0.1.4:
     resolution: {integrity: sha512-asLFVfWWtJ90ZyOUHMqk7/S2w2guQKxUI2itj3d92ADHhxUSbCMGi1f1cBcJ7xM1To+pE/Khbwo1yuNbMEPKeA==}
