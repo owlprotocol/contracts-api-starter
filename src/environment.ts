@@ -16,23 +16,12 @@ declare global {
     }
 }
 
-declare global {
-    interface ImportMetaEnv {
-        readonly NODE_ENV?: "development" | "production" | "test";
-        readonly API_KEY?: string;
-        readonly API_URL?: string;
-    }
-}
-
 const isClient = () => typeof window !== "undefined";
 
 if (!isClient()) {
     dotenv.config();
 }
 
-// @ts-ignore
-export const NODE_ENV = (import.meta.env ? import.meta.env.NODE_ENV : process.env.NODE_ENV) ?? "development";
-// @ts-ignore
-export const API_KEY = import.meta.env ? import.meta.env.API_KEY : process.env.API_KEY;
-// @ts-ignore
-export const API_URL = (import.meta.env ? import.meta.env.API_URL : process.env.API_URL) ?? "http://localhost:3000";
+export const NODE_ENV = process.env.NODE_ENV ?? "development";
+export const API_KEY = process.env.API_KEY;
+export const API_URL = process.env.API_URL ?? "http://localhost:3000";
