@@ -47,9 +47,9 @@ import { createClient } from "@owlprotocol/contracts-api-client-trpc";
 Generally for integrating an existing app you would do the following:
 
 1. Create an **Owl API Project** associated with your app.
-2. Use our API to generate `Smart Wallets` for each of your users, and "store" the associated `OwlUserId`.
-    > You will need the `OwlUserId` in subsequent calls to send them items or update data.
-3. Deploy a `Digital Item Collection`
+2. Use our API to generate **Smart Wallets** for each of your users, and "store" the associated `owlUserId`.
+    > You will need the `owlUserId` in subsequent calls to send them items or update data.
+3. Deploy a **Digital Item Collection**
 
 
 ## Project Setup
@@ -85,11 +85,11 @@ pnpm install
 
 Create a `.env` file similar to `.env.example`:
 
-In this example we are using Linea `chainId`: 80001, another common one for testing is Polygon testnet (Mumbai): 80001
+In this example we are using the Polygon testnet (Mumbai) `chainId`: 80001
 
 ```bash
 API_KEY="<YOUR_API_KEY>"
-API_URL="http://contracts-api.owlprotocol.xyz/api/trpc"
+API_URL="https://contracts-api.owlprotocol.xyz/api/trpc"
 NETWORK_ID=80001
 ```
 
@@ -111,12 +111,12 @@ pnpm run recipes:deploy-safe
 
 ### ERC721 Owl Recipe
 
-Run this recipe to deploy an ERC721 collection called `My Collection` with a `MY` ticker symbol.
+Run this recipe to deploy an ERC721 collection called "My Collection" with a "MY" ticker symbol.
 
 This Recipe has the following steps:
 
 1. Deploy an [ERC721](https://ethereum.org/en/developers/docs/standards/tokens/erc-721/) collection
-2. Mint one NFT to `address(1)`
+2. Mint one asset to address `0xb3BEc97C92A4aEA1371A9184eeD7646CB64146D3`
 
 ```bash
 pnpm run recipes:deploy-erc721-owl-collection
